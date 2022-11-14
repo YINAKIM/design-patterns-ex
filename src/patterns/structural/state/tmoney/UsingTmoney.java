@@ -10,12 +10,9 @@ public class UsingTmoney {
         tmoney.takeBus();
         tmoney.transferTo();
         tmoney.takeBus();
-
         tmoney.takeBus();
 
         tmoney.charging(1000);
         tmoney.takeBus();
-
-
     }
 }

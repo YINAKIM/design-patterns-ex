@@ -14,6 +14,7 @@ public class Tmoney {
         this.usable = new UsableTmoney(this);
         this.unUsable = new UnUsableTmoney(this);
         this.state = this.balance > 0 ? this.usable : this.unUsable;
+        System.out.println("현재 잔액 : " + this.balance);
     }
 
     /**

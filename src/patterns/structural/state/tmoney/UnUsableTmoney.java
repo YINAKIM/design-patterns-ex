@@ -16,8 +16,8 @@ public class UnUsableTmoney implements State {
     public void chargeTmoney(int balance, int charging) {
         int bal = balance + charging;
         System.out.println("================ 사용불가능한 카드 [충전중...] ================");
-        System.out.println(String.valueOf(charging) + "원 충전합니다");
-        System.out.println("잔액 : " + String.valueOf(bal));
+        System.out.println(charging + "원 충전합니다");
+        System.out.println("잔액 : " + bal);
 
         this.tmoney.setBalance(bal);
         this.tmoney.setState(bal > 0 ? tmoney.usable :  tmoney.unUsable);
@@ -43,7 +43,7 @@ public class UnUsableTmoney implements State {
         int bal = balance;
         System.out.println("================ 환승 후 사용불가능 ================");
         System.out.println("환승입니다.");
-        System.out.println("잔액 : " + String.valueOf(bal));
+        System.out.println("잔액 : " + bal);
         this.tmoney.setBalance(bal);
         this.tmoney.setState(bal > 0 ? tmoney.usable : tmoney.unUsable);
     }
